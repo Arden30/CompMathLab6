@@ -24,7 +24,7 @@ public class ChartsBuilder extends JFrame {
         XYSeriesCollection dataset = new XYSeriesCollection();
 
         XYSeries pointsSeries = new XYSeries("Точное решение");
-        for (double x = task.x0(); x <= task.xn(); x += solution.h()) {
+        for (double x = task.x0(); x <= task.xn(); x += 0.01) {
             pointsSeries.add(x, task.equation().solution(x, task.x0(), task.y0()));
         }
         dataset.addSeries(pointsSeries);

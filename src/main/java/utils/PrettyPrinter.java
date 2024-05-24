@@ -29,7 +29,7 @@ public class PrettyPrinter {
     public static void printSolution(Solution solution, Task task) {
         printString("Шаг" + String.format("%" + 15 + "s", "") + "X" + String.format("%" + 15 + "s", "") + "Приближенное решение" + String.format("%" + 15 + "s", "") + "Точное решение" + String.format("%" + 15 + "s", ""));
         for (int i = 0; i < solution.yList().size(); i++) {
-            printString(i + String.format("%" + 15 + "s", "") + String.format("%.2f", solution.xList().get(i)) + String.format("%" + 20 + "s", "") + String.format("%.8f", solution.yList().get(i)) + String.format("%" + 20 + "s", "") + String.format("%.8f", task.equation().solution(solution.xList().get(i), task.x0(), task.y0())));
+            printString(i + String.format("%" + 15 + "s", "") + String.format("%.3f", solution.xList().get(i)) + String.format("%" + 20 + "s", "") + String.format("%.8f", solution.yList().get(i)) + String.format("%" + 20 + "s", "") + String.format("%.8f", task.equation().solution(solution.xList().get(i), task.x0(), task.y0())));
         }
     }
 }
